@@ -16,11 +16,14 @@
   ],
   "author": "Adam Blunt (adamblunt.me)",
   "license": "MIT",
-   "bin": {
+  "bin": {
     "snippet": "./login.js"
   },
   "bugs": {
     "url": "https://github.com/adamxp12/bluntlab-login-motd/issues"
   },
-  "homepage": "https://github.com/adamxp12/bluntlab-login-motd#readme"
+  "homepage": "https://github.com/adamxp12/bluntlab-login-motd#readme",
+  "dependencies": {
+    "colour": "^0.7.1"
+  }
 }
