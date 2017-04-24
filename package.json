@@ -17,7 +17,7 @@
   "author": "Adam Blunt (adamblunt.me)",
   "license": "MIT",
   "bin": {
-    "snippet": "./login.js"
+    "bluntlabmotd": "./login.js"
   },
   "bugs": {
     "url": "https://github.com/adamxp12/bluntlab-login-motd/issues"
