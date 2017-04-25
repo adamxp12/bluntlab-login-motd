@@ -10,13 +10,13 @@ var colour = require('colour'),
 console.log("    "+"Welcome to ".grey+os.hostname().rainbow.bold);
 
 //os type and version (if linux then run getos instead for proper distro recognition)
-if(os.type() === "linux") {
+if(os.platform() === "linux") {
     getos(function(e,os) {
         if(e) return console.log(e)
-        console.log("OS:".grey +os.os+" Distro: ".grey+os.dist+" Ver:".grey+os.release)
+        console.log("    OS: ".grey +colour.yellow(colour.bold(os.os))+" Distro: ".grey+colour.yellow(colour.bold(os.dist))+" Ver:".grey+colour.yellow(colour.bold(os.release)))
     })
 } else {
-    console.log("    "+"OS:".grey+osName().yellow.bold+" Ver: ".grey+os.release().yellow.bold)
+    console.log("    "+"OS: ".grey+osName().yellow.bold+" Ver: ".grey+os.release().yellow.bold)
 }
 
 //mem
