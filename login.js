@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var colour = require('colour'),
     os = require('os'),
     getos = require('getos'),
