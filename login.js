@@ -5,7 +5,8 @@ var colour = require('colour'),
     osName = require('os-name'),
     pretty = require('prettysize'),
     humanizeDuration = require('humanize-duration'),
-    cpuStat = require('cpu-stat');
+    cpuStat = require('cpu-stat'),
+    config = require('./config');
 
 //hostname
 console.log("    "+"Welcome to ".grey+os.hostname().rainbow.bold);
@@ -28,7 +29,22 @@ cpuStat.usagePercent(function(err, percent, seconds) {
       return console.log(err);
     }
     console.log("    "+"CPU: ".grey+os.cpus()[0].model.magenta.bold+" Usage: ".grey+colour.yellow(colour.bold(Math.round(percent)))+"%".yellow)
-});
+})
+
+//roles
+if(config.roles === "") {
+    // My brain hurts, adding ! does not flip this if statement
+} else {
+    console.log("    "+"Roles: ".grey+config.roles.yellow.bold)
+}
+
+//notes
+if(config.notes === "") {
+    // My brain hurts, adding ! does not flip this if statement
+} else {
+    console.log("    "+"Notes: ".grey+config.notes.red.bold)
+}
+
     
 //uptime
  console.log("    "+"Uptime: ".grey+humanizeDuration(1000 * Math.round(os.uptime())).cyan.bold)
